@@ -4,7 +4,9 @@ This is the Ship function
 10/18/2026 """
 
 import pygame 
-from settings import Settings
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING
 
 
 class Ship:

@@ -7,16 +7,15 @@ Operating on Alien Invasion
 import sys
 import pygame
 from settings import Settings
-
+from ship import Ship 
 class AlienInvasion:
 
     def __init__(self) -> None:
         pygame.init()
         self.settings = Settings()
 
-
+       
         """ Game Screen """
-
         self.screen = pygame.display.set_mode(
             (self.settings.screen_w,self.settings.screen_h))
         pygame.display.set_caption(self.settings.name)
@@ -45,5 +44,7 @@ class AlienInvasion:
 
 
 if __name__ == '__main__':
+    """Main program"""
+
     ai = AlienInvasion()
     ai.run_game()

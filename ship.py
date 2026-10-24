@@ -6,14 +6,14 @@ This is the Ship function
 import pygame 
 from typing import TYPE_CHECKING
 
-if TYPE_CHECKING
+if TYPE_CHECKING:
+    from alien_invasion import AlienInvasion
 
 
 class Ship:
     
-    from alien_invasion import AlienInvasion
 
-    def __init__(self, game: AlienInvasion):
+    def __init__(self, game: "AlienInvasion"):
         """setup of ship"""
         self.game = game
         self.settings =  game.settings

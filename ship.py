@@ -27,6 +27,8 @@ class Ship:
         
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.screen_rect.midbottom
+        self.moving_right = False
+        self.moving_left = False
 
     def draw(self):
         self.screen.blit(self.image, self.rect)

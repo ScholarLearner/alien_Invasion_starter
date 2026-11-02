@@ -29,7 +29,11 @@ class AlienInvasion:
         
         self.running = True
         self.clock = pygame.time.Clock()
-    
+
+        pygame.mixer.init()
+        self.laser_sound = pygame.mixer.Sound(self.settings.laser_sound)
+        self.laser_sound.set_volume(0.7)
+
         self.ship = Ship(self, Arsenal(self))
 
     def run_game(self):
@@ -69,7 +73,7 @@ class AlienInvasion:
              self.ship.moving_left = True
         elif event.key == pygame.K_SPACE:
             if self.ship.fire_bullet():
-                self
+              self.laser_sound.play()  
         elif event.key == pygame.K_q:
             self.running = False
             pygame.quit()

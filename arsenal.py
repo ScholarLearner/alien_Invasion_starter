@@ -1,0 +1,35 @@
+"""
+Arsenal file
+F.Martin
+this is the Arsenal function 
+10/30/2026
+"""       
+import pygame 
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from alien_invasion import AlienInvasion
+
+class ShipArsenal:
+    def __init__(self, game: 'AlienInvasion'):
+        self.game = game
+        self.settings = game.settings
+        self.arsenal = pygame.sprite.Group()
+
+    def update_arsenal(self):
+        self.arsenal.update()
+
+    def draw_arsenal(self):
+        for bullet in self.arsenal:
+            bullet.draw_bullet()
+
+    def fire_bullet(self):
+        if len(self.arsenal) < self.settings.bullets_allowed:
+            new_bullet = Bullet(self.game)
+            self.arsenal.add(new_bullet)
+            return True
+        return False
+
+
+
+

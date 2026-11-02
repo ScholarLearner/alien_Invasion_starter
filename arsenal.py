@@ -4,13 +4,15 @@ F.Martin
 this is the Arsenal function 
 10/30/2026
 """       
-import pygame 
+import pygame  
+from bullet import Bullet
 from typing import TYPE_CHECKING
 
-if TYPE_CHECKING:
+if TYPE_CHECKING: 
+  
     from alien_invasion import AlienInvasion
-
-class ShipArsenal:
+   
+class Arsenal:
     def __init__(self, game: 'AlienInvasion'):
         self.game = game
         self.settings = game.settings

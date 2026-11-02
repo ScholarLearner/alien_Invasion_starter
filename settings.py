@@ -17,4 +17,4 @@ class Settings:
         self.ship_file = Path.cwd() /'Assets'/'images'/ 'durrrSpaceShip.png'
         self.ship_w = 40
         self.ship_h = 60
-        
+        self.ship_speed = 5

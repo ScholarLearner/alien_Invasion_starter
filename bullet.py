@@ -21,7 +21,7 @@ class Bullet(Sprite):
         self.bg =pygame.transform.scale(self.bg,
             (self.settings.bullet_w,self.settings.bullet_h)
  )
-        self.rect = self.image.get_rect()
+        self.rect = self.bg.get_rect()
         self.rect.midtop = game.ship.rect.midtop
         self.y = float(self.rect.y)
 

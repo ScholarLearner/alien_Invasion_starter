@@ -8,7 +8,7 @@ import sys
 import pygame
 from settings import Settings
 from ship import Ship
-from arsenal import ShipArsenal
+from arsenal import Arsenal
 class AlienInvasion:
 
     def __init__(self) -> None:
@@ -30,7 +30,7 @@ class AlienInvasion:
         self.running = True
         self.clock = pygame.time.Clock()
     
-        self.ship = Ship(self, ShipArsenal(self))
+        self.ship = Ship(self, Arsenal(self))
 
     def run_game(self):
          """The Game loop"""

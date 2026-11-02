@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 class Ship:
     
 
-    def __init__(self, game: "AlienInvasion", arsenal: " Arsenal"):
+    def __init__(self, game: "AlienInvasion", arsenal: "Arsenal"):
         """setup of ship"""
         self.game = game
         self.settings =  game.settings
